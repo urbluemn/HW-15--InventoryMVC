@@ -12,6 +12,15 @@ namespace HW_14__InventoryAPI.Services
             this.inventoryService = inventory;
         }
 
+        public ProductModel FindByIndex(Guid? Id)
+        {
+            return inventoryService.products.Single(x => x.Id == Id);
+        }
+        public void ReplaceProduct(ProductModel product)
+        {
+            var ProductToReplace = inventoryService.products.FindIndex(x=> x.Id == product.Id);
+            inventoryService.products[ProductToReplace] = product;
+        }
         public List<ProductModel> ViewByType(string type)
         {
             List<ProductModel> SortedProducts = new List<ProductModel>();

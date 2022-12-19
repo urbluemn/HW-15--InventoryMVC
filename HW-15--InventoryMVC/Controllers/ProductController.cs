@@ -17,6 +17,11 @@ namespace HW_14__InventoryAPI.Controllers
             this.actionService = action;
         }
         [HttpGet]
+        public IActionResult IndexUpdated()
+        {
+            return View();
+        }
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
@@ -35,8 +40,8 @@ namespace HW_14__InventoryAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult ViewAllProducts() 
-        { 
+        public IActionResult ViewAllProducts()
+        {
             return View(actionService.ViewAllProducts());
         }
 
@@ -51,6 +56,28 @@ namespace HW_14__InventoryAPI.Controllers
         {
             actionService.AddProductToList(product);
             return Created($"Created {product.Name}", product);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(Guid? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+            var ProductModel = actionService.FindByIndex(Id);
+            if (ProductModel == null)
+            {
+                return NotFound();
+            }
+            return View(ProductModel);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(ProductModel productModel)
+        {
+            actionService.ReplaceProduct(productModel);
+            return RedirectToAction("ViewAllProducts");
         }
     }
 }

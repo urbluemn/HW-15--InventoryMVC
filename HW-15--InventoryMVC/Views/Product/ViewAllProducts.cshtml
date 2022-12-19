@@ -1,8 +1,9 @@
 ﻿@model IEnumerable<HW_14__InventoryAPI.Models.ProductModel>
 
 @{
-    ViewData["Title"] = "ViewAllProducts";
+    ViewData["Title"] = "All Products";
 }
+<meta lang="en-us" />
 
 <h1><strong>All Products</strong></h1>
 
@@ -40,10 +41,10 @@
                 @Html.DisplayFor(modelItem => item.Amount)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Price)
+                    @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
@@ -55,4 +56,7 @@
                        
 </table>
 @*<a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="CountInventorySum">Count Inventory Price</a>*@
-@Html.ActionLink("Count Inventory Price", "CountInventorySum", "Product")
+<td>
+@Html.ActionLink("Count Inventory Price", "CountInventorySum", "Product") 
+@Html.ActionLink("Sort", "ViewByType", "Product")
+</td>
