@@ -13,11 +13,18 @@ namespace HW_15__InventoryMVC.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        public IActionResult IndexUpdated()
+        {
+            return View();
+        }
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
+        [HttpGet]
         public IActionResult Privacy()
         {
             return View();

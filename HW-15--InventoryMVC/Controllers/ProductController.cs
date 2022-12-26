@@ -1,6 +1,5 @@
 ﻿using HW_15__InventoryMVC.Models;
 using HW_15__InventoryMVC.Services;
-using HW_15__InventoryMVC.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,22 +15,7 @@ namespace HW_15__InventoryMVC.Controllers
         {
             this.actionService = action;
         }
-        [HttpGet]
-        public IActionResult IndexUpdated()
-        {
-            return View();
-        }
-        [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        [HttpGet]
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+        
 
         [HttpGet]
         public IActionResult ViewByType(string type)

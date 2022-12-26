@@ -21,6 +21,16 @@ namespace HW_15__InventoryMVC.Services
             var ProductToReplace = inventoryService.products.FindIndex(x=> x.Id == product.Id);
             inventoryService.products[ProductToReplace] = product;
         }
+
+
+
+        public void RemoveProduct(Guid? Id) 
+        {
+            var ProductToDelete = inventoryService.products.FindIndex(x => x.Id == Id);
+            inventoryService.products.RemoveAt(ProductToDelete);
+        }
+
+
         public List<ProductModel> ViewByType(string type)
         {
             List<ProductModel> SortedProducts = new List<ProductModel>();
@@ -32,6 +42,7 @@ namespace HW_15__InventoryMVC.Services
             return SortedProducts;
 
         }
+
 
         public decimal CountInvSum()
         {

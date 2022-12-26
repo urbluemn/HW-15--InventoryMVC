@@ -1,6 +1,7 @@
 
   [
     {
+      "id": "42d7cfde-9d01-4515-a2df-bb46c5d98f89",
       "Name": "Apple",
       "Type": "Food",
       "Amount": 25,
@@ -8,6 +9,7 @@
     },
 
     {
+      "id": "30f7813c-7494-484b-8e96-d96786c36c77",
       "Name": "Chocolate Bar",
       "Type": "Food",
       "Amount": 15,
@@ -15,6 +17,7 @@
     },
 
     {
+      "id": "1220ce10-74b5-4774-8b67-c83663256c6d",
       "Name": "Washing Powder",
       "Type": "Chemicals",
       "Amount": 10,
@@ -22,6 +25,7 @@
     },
 
     {
+      "id": "34826cc9-f4aa-47c0-9a89-311094cc5ef9",
       "Name": "Soap",
       "Type": "Chemicals",
       "Amount": 20,
@@ -29,6 +33,7 @@
     },
 
     {
+      "id": "27eed4f8-ea3e-4cb1-8e34-b28c074a386d",
       "Name": "Cell Phone",
       "Type": "Machinery",
       "Amount": 10,
@@ -36,6 +41,7 @@
     },
 
     {
+      "id": "ec021010-51f3-449b-9ea8-9e5e4e1f4eef",
       "Name": "Washing Machine",
       "Type": "Machinery",
       "Amount": 4,

@@ -6,19 +6,19 @@ namespace HW_15__InventoryMVC.Models
 {
     public class ProductModel
     {
-        public Guid Id { get; private set; }
-        public string Name { get; private set; }
-        public string Type { get; private set; }
-        public int Amount { get; private set; }
-        [DisplayFormat(DataFormatString ="{0:n2}", ApplyFormatInEditMode = true)]
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal Price { get; private set; }
+        public Guid Id { get; set; }
+        public string? Name { get; set; }
+        public string? Type { get; set; }
+        public int Amount { get; set; }
+        //[DisplayFormat(DataFormatString = "{0:n2}", ApplyFormatInEditMode = true)]
+        //[Column(TypeName = "decimal(18, 2)")]
+        public decimal Price { get; set; }
 
-        //public ProductModel() { }
+        public ProductModel() { }
 
-        public ProductModel(string name, string type, int amount, decimal price)
+        public ProductModel(string name, string type, int amount, decimal price, Guid guid)
         {
-            Id = Guid.NewGuid();
+            Id = guid;
             Name = name;
             Type = type;
             Amount = amount;
@@ -26,5 +26,7 @@ namespace HW_15__InventoryMVC.Models
         }
 
         
+
+
     }
 }
