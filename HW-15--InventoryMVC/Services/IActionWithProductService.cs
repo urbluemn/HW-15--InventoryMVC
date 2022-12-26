@@ -1,4 +1,4 @@
-﻿using HW_14__InventoryAPI.Models;
+﻿using HW_15__InventoryMVC.Models;
 
 namespace HW_15__InventoryMVC.Services
 {

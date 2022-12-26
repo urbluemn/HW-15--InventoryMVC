@@ -1,7 +1,7 @@
-﻿using HW_14__InventoryAPI.Models;
+﻿using HW_15__InventoryMVC.Models;
 using Newtonsoft.Json;
 
-namespace HW_14__InventoryAPI.Services
+namespace HW_15__InventoryMVC.Services
 {
     public class InventoryService
     {

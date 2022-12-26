@@ -1,16 +1,16 @@
-﻿using HW_14__InventoryAPI.Models;
-using HW_14__InventoryAPI.Services;
+﻿using HW_15__InventoryMVC.Models;
+using HW_15__InventoryMVC.Services;
 using HW_15__InventoryMVC.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HW_14__InventoryAPI.Controllers
+namespace HW_15__InventoryMVC.Controllers
 {
     [Controller]
     //[Route("[controller]/[action]")]
     public class ProductController : Controller
     {
-        ActionWithProductService actionService;
+        private readonly ActionWithProductService actionService;
 
         public ProductController(ActionWithProductService action)
         {

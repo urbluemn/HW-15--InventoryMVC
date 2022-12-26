@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Reflection;
 
-namespace HW_14__InventoryAPI.Models
+namespace HW_15__InventoryMVC.Models
 {
     public class ProductModel
     {
@@ -14,6 +14,8 @@ namespace HW_14__InventoryAPI.Models
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; private set; }
 
+        //public ProductModel() { }
+
         public ProductModel(string name, string type, int amount, decimal price)
         {
             Id = Guid.NewGuid();
@@ -22,5 +24,7 @@ namespace HW_14__InventoryAPI.Models
             Amount = amount;
             Price = price;
         }
+
+        
     }
 }

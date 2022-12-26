@@ -1,8 +1,8 @@
-﻿using HW_14__InventoryAPI.Models;
+﻿using HW_15__InventoryMVC.Models;
 using System.Globalization;
 using static System.Net.WebRequestMethods;
 
-namespace HW_14__InventoryAPI.Services
+namespace HW_15__InventoryMVC.Services
 {
     public class ActionWithProductService
     {

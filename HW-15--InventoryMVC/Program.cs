@@ -1,13 +1,12 @@
-using HW_14__InventoryAPI.Services;
 using HW_15__InventoryMVC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddScoped<ActionWithProductService>();
-builder.Services.AddSingleton(new InventoryService("Inventory.json"));
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton(new InventoryService("Inventory.json"));
+builder.Services.AddTransient<ActionWithProductService>();
+
 
 var app = builder.Build();
 

@@ -1,4 +1,4 @@
-﻿@model HW_14__InventoryAPI.Models.ProductModel
+﻿@model ProductModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -12,11 +12,7 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Id" class="control-label" hidden="text"></label>
-                <input asp-for="Id" class="form-control" hidden="text" />
-                <span asp-validation-for="Id" class="text-danger" hidden="text"></span>
-            </div>
+            <input hidden asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
